@@ -1,0 +1,40 @@
+{
+
+    "manifest_version": 2,
+    "name": "BGA UI",
+    "version": "1.0",
+  
+    "description": "Allows user to enable ui modifications for tables of certain games in Board Game Arena",
+    "icons": {
+        "48": "icons/bgaui-48.png"
+    },
+  
+    "permissions": [
+        "*://boardgamearena.com/*",
+        "tabs",
+        "cookies"
+    ],
+  
+    "web_accessible_resources": [
+    ],
+  
+    "browser_action": {
+      "default_icon": {
+       "32" : "icons/bgaui-32.png"
+      },
+      "default_title": "BGA UI",
+      "default_popup": "popup/bgaui.html"
+    },
+  
+    "background": {
+      "scripts": ["background_scripts/background.js"]
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://boardgamearena.com/*"],
+        "js": ["content_scripts/updateui.js"]
+      }
+    ]
+  }
+  
