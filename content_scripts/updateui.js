@@ -125,7 +125,7 @@ function updateForTheCrew(cookieVals){
     ensureButton();
     let button = document.getElementById("btnBgaUiTheCrewCardCounter");
     if(cookieVals.theCrewCardCounter){
-        addCardCounterToLog();
+        //addCardCounterToLog();
         button.style="padding: 1ex;background: #e74742;color: white;font-style: oblique;"
         console.log("making button visible");
     } else {
