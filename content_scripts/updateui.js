@@ -1,3 +1,4 @@
+
 browser.runtime.onMessage.addListener(updateUi);
 
 function updateUi(request, sender, sendResponse){

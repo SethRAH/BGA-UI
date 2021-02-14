@@ -16,6 +16,7 @@
     ],
   
     "web_accessible_resources": [
+        "lib/browser-polyfill.js"
     ],
   
     "browser_action": {
@@ -27,13 +28,19 @@
     },
   
     "background": {
-      "scripts": ["background_scripts/background.js"]
+      "scripts": [
+          "lib/browser-polyfill.js",
+          "background_scripts/background.js"
+        ]
     },
   
     "content_scripts": [
       {
         "matches": ["*://boardgamearena.com/*"],
-        "js": ["content_scripts/updateui.js"]
+        "js": [
+            "lib/browser-polyfill.js",
+            "content_scripts/updateui.js"
+        ]
       }
     ]
   }
